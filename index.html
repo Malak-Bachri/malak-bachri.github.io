@@ -1,3 +1,6 @@
+Here you go — I replaced that paragraph with a **Languages (percent bars)** section and a **Frameworks & Tools** paragraph. I also added tiny CSS helpers for `percent90` and `percent100` so your bars render precisely.
+
+```html
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
@@ -6,7 +9,7 @@
   <!-- basic page needs -->
   <meta charset="utf-8">
   <title>Malak Bachri | Portfolio</title>
-  <meta name="description" content="Portfolio of Malak Bachri – CS + Math minor at SAU, AI researcher (PH‑SAM), TaxMind, 4.0 GPA.">
+  <meta name="description" content="Portfolio of Malak Bachri – CS + Math minor at SAU, AI researcher (PH-SAM), TaxMind, 4.0 GPA.">
   <meta name="author" content="Malak Bachri">
 
   <!-- mobile specific metas -->
@@ -16,6 +19,13 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/vendor.css">
+
+  <!-- optional helpers for new percentages -->
+  <style>
+    /* Match your existing skill bar pattern */
+    .skill-bars .percent90 { width: 90%; }
+    .skill-bars .percent100 { width: 100%; }
+  </style>
 
   <!-- script -->
   <script src="js/modernizr.js"></script>
@@ -58,7 +68,7 @@
           <h1>I'm Malak Bachri.</h1>
           <p class="intro-position">
             <span>CS @ Southern Arkansas University (GPA 4.0)</span>
-            <span>AI Researcher (PH‑SAM)</span>
+            <span>AI Researcher (PH-SAM)</span>
             <span>Developer (Flask/Django, PyTorch)</span>
           </p>
           <a class="button stroke smoothscroll" href="#about" title="Learn more">Learn more</a>
@@ -75,7 +85,7 @@
         <div class="intro-info">
           <img src="images/malak.jpeg" alt="Malak Bachri portrait">
           <p class="lead">
-            Senior‑level Computer Science student (Math minor, Cybersecurity certificate) at Southern Arkansas University. I build applied AI systems—from medical image segmentation (PH‑SAM) to an AI‑powered tax‑filing assistant (TaxMind). Honors student on the President’s List; passionate about research, clean code, and shipping usable tools.
+            Senior-level Computer Science student (Math minor, Cybersecurity certificate) at Southern Arkansas University. I build applied AI systems—from medical image segmentation (PH-SAM) to an AI-powered tax-filing assistant (TaxMind). Honors student on the President’s List; passionate about research, clean code, and shipping usable tools.
           </p>
         </div>
       </div>
@@ -90,7 +100,7 @@
           <li><strong>GPA:</strong><span>4.0 / 4.0</span></li>
           <li><strong>Email:</strong><span>malakbachri145@gmail.com</span></li>
           <li><strong>Location:</strong><span>Magnolia, Arkansas, USA</span></li>
-          <li><strong>Phone:</strong><span>(870) 713‑0634</span></li>
+          <li><strong>Phone:</strong><span>(870) 713-0634</span></li>
           <li><strong>Links:</strong><span>
             <a target="_blank" href="http://www.linkedin.com/in/malak-bachri">LinkedIn</a> ·
             <a target="_blank" href="https://github.com/Malak-Bachri">GitHub</a> ·
@@ -109,8 +119,22 @@
           <li><div class="progress percent75"><span>75%</span></div><strong>Java / Kotlin</strong></li>
           <li><div class="progress percent70"><span>70%</span></div><strong>TensorFlow</strong></li>
         </ul>
-        <p class="lead" style="margin-top:1rem;">
-          Also: Docker, Git, Linux; Languages: English, French, Arabic, Spanish, Darija.
+
+        <!-- NEW Languages (spoken) with percentage bars -->
+        <h3 style="margin-top:1.75rem;">Languages</h3>
+        <ul class="skill-bars">
+          <li><div class="progress percent100"><span>100%</span></div><strong>English</strong></li>
+          <li><div class="progress percent90"><span>90%</span></div><strong>French</strong></li>
+          <li><div class="progress percent85"><span>85%</span></div><strong>Arabic</strong></li>
+          <li><div class="progress percent75"><span>75%</span></div><strong>Spanish</strong></li>
+          <li><div class="progress percent85"><span>85%</span></div><strong>Darija</strong></li>
+        </ul>
+
+        <!-- NEW Frameworks & Tools paragraph -->
+        <h3 style="margin-top:1.75rem;">Frameworks &amp; Tools</h3>
+        <p class="lead" style="margin-top:.5rem;">
+          <strong>Frameworks:</strong> Flask, Django, TensorFlow, PyTorch, OpenCV, React, Node.js, Angular<br>
+          <strong>Developer Tools:</strong> Linux, Docker, Git, Firebase
         </p>
       </div>
     </div>
@@ -196,9 +220,9 @@
         <div class="service">
           <span class="icon"><i class="icon-window"></i></span>
           <div class="service-content">
-            <h3>PH‑SAM: Medical X‑ray Segmentation</h3>
+            <h3>PH-SAM: Medical X-ray Segmentation</h3>
             <p class="desc">
-              Persistent Homology + Segment Anything for automated localized knee X‑ray segmentation. Built full pipeline (Python, PyTorch, OpenCV, Ripser). Presented at IntelliSys 2025 (Amsterdam). 2nd place — Arkansas DART research competition. <a target="_blank" href="https://doi.org/10.1007/978-3-031-99965-9_37">DOI link</a>.
+              Persistent Homology + Segment Anything for automated localized knee X-ray segmentation. Built full pipeline (Python, PyTorch, OpenCV, Ripser). Presented at IntelliSys 2025 (Amsterdam). 2nd place — Arkansas DART research competition. <a target="_blank" href="https://doi.org/10.1007/978-3-031-99965-9_37">DOI link</a>.
             </p>
           </div>
         </div>
@@ -208,7 +232,7 @@
           <div class="service-content">
             <h3>Timely Phishing Detection (Mobile)</h3>
             <p class="desc">
-              Ongoing research: lightweight multi‑modal phishing detection for mobile; balances accuracy and performance via feature‑selection and time‑aware analysis.
+              Ongoing research: lightweight multi-modal phishing detection for mobile; balances accuracy and performance via feature-selection and time-aware analysis.
             </p>
           </div>
         </div>
@@ -218,7 +242,7 @@
           <div class="service-content">
             <h3>TaxMind — AI Tax Filing Assistant</h3>
             <p class="desc">
-              Senior project: OCR + LLM pipeline to extract and pre‑fill IRS forms (W‑2/1099 → 1040) with human‑in‑the‑loop verification (Flask/Django backend).
+              Senior project: OCR + LLM pipeline to extract and pre-fill IRS forms (W-2/1099 → 1040) with human-in-the-loop verification (Flask/Django backend).
             </p>
           </div>
         </div>
@@ -232,7 +256,7 @@
       <div class="col-twelve">
         <h5>Publications</h5>
         <p>
-          Bachri, M., Al Shami, A., Young, C., & Grissom, D. (2025). <em>Persistent Homology and Segment Anything Model for Automated Localized Medical X‑ray Segmentation (PH‑SAM)</em>. In <em>IntelliSys 2025</em>, Springer. <a target="_blank" href="https://doi.org/10.1007/978-3-031-99965-9_37">https://doi.org/10.1007/978-3-031-99965-9_37</a>
+          Bachri, M., Al Shami, A., Young, C., & Grissom, D. (2025). <em>Persistent Homology and Segment Anything Model for Automated Localized Medical X-ray Segmentation (PH-SAM)</em>. In <em>IntelliSys 2025</em>, Springer. <a target="_blank" href="https://doi.org/10.1007/978-3-031-99965-9_37">https://doi.org/10.1007/978-3-031-99965-9_37</a>
         </p>
       </div>
     </div>
@@ -275,7 +299,7 @@
       <div class="col-four tab-full">
         <div class="icon"><i class="icon-phone"></i></div>
         <h5>Phone</h5>
-        <p>(870) 713‑0634</p>
+        <p>(870) 713-0634</p>
       </div>
     </div>
   </section>
@@ -301,5 +325,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
+```
