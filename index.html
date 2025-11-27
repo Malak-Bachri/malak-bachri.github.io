@@ -58,30 +58,30 @@
     </div>
   </header>
 
-<!-- intro section -->
-<section id="intro">
-  <div class="intro-overlay"></div>
-  <div class="intro-content">
-    <div class="row">
-      <div class="col-twelve">
-        <h5>Welcome.</h5>
-        <h1>I'm Malak Bachri.</h1>
-        <p class="intro-position">
-          <span>AI Researcher · Developer · Publisher</span>
-          <span>Exploring intelligence through code, topology, and design</span>
-        </p>
-        <p class="intro-lead">
-          Senior Computer Science student at Southern Arkansas University.  
-          Experienced in building AI systems with reinforcement learning, agentic AI, and applied topology 
-          through Persistent Homology. My work spans from medical image segmentation (<strong>PH-SAM</strong>) 
-          to intelligent tax-automation systems (<strong>TaxMind</strong>), combining rigorous research with practical development.  
-          I’m passionate about systems that learn, adapt, and elevate human capability.
-        </p>
-        <a class="button stroke smoothscroll" href="#about" title="Learn more">Explore My Work</a>
+  <!-- intro section -->
+  <section id="intro">
+    <div class="intro-overlay"></div>
+    <div class="intro-content">
+      <div class="row">
+        <div class="col-twelve">
+          <h5>Welcome.</h5>
+          <h1>I'm Malak Bachri.</h1>
+          <p class="intro-position">
+            <span>AI Researcher · Developer · Publisher</span>
+            <span>Exploring intelligence through code, topology, and design</span>
+          </p>
+          <p class="intro-lead">
+            Senior Computer Science student at Southern Arkansas University.  
+            Experienced in building AI systems with reinforcement learning, agentic AI, and applied topology 
+            through Persistent Homology. My work spans from medical image segmentation (<strong>PH-SAM</strong>) 
+            to intelligent tax-automation systems (<strong>TaxMind</strong>), combining rigorous research with practical development.  
+            I’m passionate about systems that learn, adapt, and elevate human capability.
+          </p>
+          <a class="button stroke smoothscroll" href="#about" title="Learn more">Explore My Work</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- about section -->
   <section id="about">
@@ -121,14 +121,14 @@
         <h3>Skills</h3>
         <ul class="skill-bars">
           <li><div class="progress percent95"><span>95%</span></div><strong>Python</strong></li>
-          <li><div class="progress percent85"><span>85%</span></div><strong>PyTorch, OpenCV & Pandas</strong></li>
+          <li><div class="progress percent85"><span>85%</span></div><strong>PyTorch, OpenCV &amp; Pandas</strong></li>
           <li><div class="progress percent80"><span>80%</span></div><strong>Flask / Django</strong></li>
           <li><div class="progress percent80"><span>80%</span></div><strong>SQL (MySQL)</strong></li>
           <li><div class="progress percent75"><span>75%</span></div><strong>Java / Kotlin</strong></li>
           <li><div class="progress percent70"><span>70%</span></div><strong>TensorFlow</strong></li>
         </ul>
 
-        <!-- NEW Languages (spoken) with percentage bars -->
+        <!-- Languages (spoken) -->
         <h3 style="margin-top:1.75rem;">Languages</h3>
         <ul class="skill-bars">
           <li><div class="progress percent100"><span>100%</span></div><strong>English</strong></li>
@@ -136,10 +136,9 @@
           <li><div class="progress percent100"><span>100%</span></div><strong>Darija</strong></li>
           <li><div class="progress percent90"><span>90%</span></div><strong>Arabic</strong></li>
           <li><div class="progress percent75"><span>75%</span></div><strong>Spanish</strong></li>
-          
         </ul>
 
-        <!-- NEW Frameworks & Tools paragraph -->
+        <!-- Frameworks & Tools -->
         <h3 style="margin-top:1.75rem;">Frameworks &amp; Tools</h3>
         <p class="lead" style="margin-top:.5rem;">
           <strong>Frameworks:</strong> Flask, Django, TensorFlow, PyTorch, OpenCV, React, Node.js, Angular<br>
@@ -164,6 +163,7 @@
       </div>
       <div class="col-twelve">
         <div class="timeline-wrap">
+
           <div class="timeline-block">
             <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
             <div class="timeline-header">
@@ -190,13 +190,14 @@
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
     <div class="row resume-timeline">
       <div class="col-twelve resume-header">
-        <h2>Education & Honors</h2>
+        <h2>Education &amp; Honors</h2>
       </div>
       <div class="col-twelve">
         <div class="timeline-wrap">
@@ -222,43 +223,175 @@
   <section id="projects">
     <div class="row section-intro">
       <div class="col-twelve">
-        <h5>Projects & Research</h5>
+        <h5>Projects &amp; Research</h5>
       </div>
     </div>
 
     <div class="row services-content">
       <div id="owl-slider" class="owl-carousel services-list">
+
+        <!-- PH-SAM -->
         <div class="service">
-          <span class="icon"><i class="icon-window"></i></span>
+          <span class="icon"><i>🩻</i></span>
           <div class="service-content">
             <h3>PH-SAM: Medical X-ray Segmentation</h3>
             <p class="desc">
-              Developed a full-stack AI pipeline combining persistent homology (topological data analysis) with the Segment Anything Model (SAM) to precisely segment anatomical structures in knee X-rays. Built using Python, PyTorch, OpenCV, and Ripser.
-              Presented at IntelliSys 2025 in Amsterdam and awarded 2nd place in the Arkansas DART Research Competition. <a target="_blank" href="https://doi.org/10.1007/978-3-031-99965-9_37">DOI link</a>.
+              Developed a full-stack AI pipeline that combines Persistent Homology with the Segment Anything Model (SAM/SAM2)
+              to segment anatomical structures in knee X-rays. Includes centroid detection, automatic mask selection, and PH curve
+              analysis; presented at IntelliSys 2025 and awarded 2nd place in the Arkansas DART Research Competition.
             </p>
           </div>
         </div>
 
+        <!-- TaxMind + Obscura -->
         <div class="service">
-          <span class="icon"><i class="icon-shield"></i></span>
+          <span class="icon"><i>🧾</i></span>
+          <div class="service-content">
+            <h3>TaxMind &amp; Obscura — AI Tax Filing Assistant</h3>
+            <p class="desc">
+              Group capstone project building an end-to-end tax-filing assistant: OCR → local redaction (Obscura) → GPT-based field
+              extraction → JSON mapping to IRS 1040. Uses regex and context rules to detect sensitive data, runs fully locally for
+              privacy, and integrates a human-in-the-loop review step for accurate, compliant tax forms.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phishing Detection -->
+        <div class="service">
+          <span class="icon"><i>🛡️</i></span>
           <div class="service-content">
             <h3>Timely Phishing Detection (Mobile)</h3>
             <p class="desc">
-              Ongoing research on a lightweight, multi-modal phishing detection system for mobile platforms. 
-              The model integrates feature-selection and temporal analysis to optimize detection accuracy while minimizing computation time,  enabling real-time, energy-efficient protection against evolving phishing threats.
+              Lightweight multi-modal phishing detection system for mobile platforms using a large link dataset (phish vs. legit).
+              Engineered domain, content, and history features with variance and Pearson-correlation–based N+1 feature selection
+              to balance detection accuracy with low computational cost.
             </p>
           </div>
         </div>
 
+        <!-- YOLO vs SAM comparison -->
         <div class="service">
-          <span class="icon"><i class="icon-clipboard"></i></span>
+          <span class="icon"><i>📊</i></span>
           <div class="service-content">
-            <h3>TaxMind — AI Tax Filing Assistant</h3>
+            <h3>YOLO vs. SAM Segmentation Benchmark</h3>
             <p class="desc">
-              Group capstone project developing an AI-powered tax-filing assistant that integrates OCR and large language models to extract, interpret, and pre-fill IRS forms (W-2/1099 → 1040). Built collaboratively with a team using a Flask/Django backend and a human-in-the-loop verification pipeline to ensure accuracy and compliance.
+              Benchmarked YOLO and SAM/SAM2 models on medical-style imagery, reporting precision, recall, F1-score, accuracy,
+              and confusion matrices. Used the study to guide architecture choices for downstream segmentation projects.
             </p>
           </div>
         </div>
+
+        <!-- DP analysis -->
+        <div class="service">
+          <span class="icon"><i>🔐</i></span>
+          <div class="service-content">
+            <h3>Differential Privacy Analysis Tool</h3>
+            <p class="desc">
+              Applied Gaussian differential privacy to the Steam Reviews dataset, computing private statistics such as the average
+              number of “Recommended” reviews and helpfulness bands. Implemented DP-preserving histograms and visualizations
+              to explore utility–privacy trade-offs.
+            </p>
+          </div>
+        </div>
+
+        <!-- NASA n8n agent -->
+        <div class="service">
+          <span class="icon"><i>🛰️</i></span>
+          <div class="service-content">
+            <h3>NASA Asteroid SMS Agent (n8n)</h3>
+            <p class="desc">
+              Designed an agentic AI workflow in n8n that fetches the latest NASA asteroid data on a schedule, summarizes key events,
+              and delivers them as daily text messages. Demonstrates event-driven automation and API-based reporting.
+            </p>
+          </div>
+        </div>
+
+        <!-- What Should We Watch -->
+        <div class="service">
+          <span class="icon"><i>🎬</i></span>
+          <div class="service-content">
+            <h3>“What Should We Watch?” Movie Recommender</h3>
+            <p class="desc">
+              Web app that recommends movies from a ~16k-title dataset, displaying year, genre, IMDb rating, duration,
+              and summary. Lets users filter by preferences to quickly discover something to watch.
+            </p>
+          </div>
+        </div>
+
+        <!-- Smart Fridge -->
+        <div class="service">
+          <span class="icon"><i>🧊</i></span>
+          <div class="service-content">
+            <h3>Smart Fridge Dashboard (Django)</h3>
+            <p class="desc">
+              Software engineering project following the full development lifecycle. Built a Django-based dashboard that lists food
+              items, quantities, and calories from a database, with a UI designed for an IoT smart-fridge interface.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ghost AI Home -->
+        <div class="service">
+          <span class="icon"><i>🏠</i></span>
+          <div class="service-content">
+            <h3>Ghost AI Home — Flask/Django Web App</h3>
+            <p class="desc">
+              Personal web platform migrating Python AI utilities into a unified Flask/Django interface. Serves as an experimentation
+              hub for integrating agents, tools, and small AI demos behind a simple web front end.
+            </p>
+          </div>
+        </div>
+
+        <!-- Jarvis AI Assistant -->
+        <div class="service">
+          <span class="icon"><i>🤖</i></span>
+          <div class="service-content">
+            <h3>Jarvis AI Assistant (AI Club)</h3>
+            <p class="desc">
+              Built an AI assistant prototype with RAG-based expert knowledge, text and voice interaction, and speech synthesis.
+              Used Whisper for speech-to-text and ElevenLabs for natural-sounding responses, with an MVP plan and architecture
+              for club-level extensions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Munchies App -->
+        <div class="service">
+          <span class="icon"><i>📱</i></span>
+          <div class="service-content">
+            <h3>Munchies — Food Delivery App (Android)</h3>
+            <p class="desc">
+              Android Studio project inspired by DoorDash: users browse nearby restaurants via the Google Maps API, view menus,
+              and add items to a cart. Implements a basic ordering flow and location-aware restaurant discovery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Whisper STT -->
+        <div class="service">
+          <span class="icon"><i>🎙️</i></span>
+          <div class="service-content">
+            <h3>Speech-to-Text Pipeline with Whisper</h3>
+            <p class="desc">
+              Implemented a full speech-to-text pipeline in Python using Whisper, handling microphone capture, segmentation, and
+              transcription. This pipeline powers voice interaction in the Jarvis assistant prototype.
+            </p>
+          </div>
+        </div>
+
+        <!-- Compiler & ML mini projects -->
+        <div class="service">
+          <span class="icon"><i>⚙️</i></span>
+          <div class="service-content">
+            <h3>Compiler &amp; ML Mini-Projects</h3>
+            <p class="desc">
+              Implemented a Simple Language compiler that translates high-level constructs (input/print, <code>let</code>, conditionals,
+              <code>goto</code>) into SML instructions. Also explored classic ML workflows including a CNN classifier, BERT fine-tuning,
+              and predictive modeling on the Titanic dataset.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -269,7 +402,7 @@
       <div class="col-twelve">
         <h5>Publications</h5>
         <p>
-          Bachri, M., Al Shami, A., Young, C., & Grissom, D. (2025). <em>Persistent Homology and Segment Anything Model for Automated Localized Medical X-ray Segmentation (PH-SAM)</em>. In <em>IntelliSys 2025</em>, Springer. <a target="_blank" href="https://doi.org/10.1007/978-3-031-99965-9_37">https://doi.org/10.1007/978-3-031-99965-9_37</a>
+          Bachri, M., Al Shami, A., Young, C., &amp; Grissom, D. (2025). <em>Persistent Homology and Segment Anything Model for Automated Localized Medical X-ray Segmentation (PH-SAM)</em>. In <em>IntelliSys 2025</em>, Springer. <a target="_blank" href="https://doi.org/10.1007/978-3-031-99965-9_37">https://doi.org/10.1007/978-3-031-99965-9_37</a>
         </p>
       </div>
     </div>
@@ -286,7 +419,6 @@
 
     <div class="row contact-form">
       <div class="col-twelve">
-        <!-- Simple email form; replace action with your Formspree endpoint if desired -->
         <form id="contactform" action="mailto:malakbachri145@gmail.com" method="POST" enctype="text/plain">
           <input type="text" name="name" placeholder="Your Name">
           <input type="email" name="_replyto" placeholder="Your Email">
@@ -304,11 +436,13 @@
         <h5>Location</h5>
         <p>Magnolia, AR · USA</p>
       </div>
+
       <div class="col-four tab-full collapse">
         <div class="icon"><i class="icon-mail"></i></div>
         <h5>Email</h5>
         <p><a href="mailto:malakbachri145@gmail.com">malakbachri145@gmail.com</a></p>
       </div>
+
       <div class="col-four tab-full">
         <div class="icon"><i class="icon-phone"></i></div>
         <h5>Phone</h5>
@@ -338,10 +472,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-```
-
-
-
-
-
-
