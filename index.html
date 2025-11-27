@@ -17,11 +17,70 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/vendor.css">
 
-  <!-- optional helpers for new percentages -->
+  <!-- inline helpers -->
   <style>
-    /* Match your existing skill bar pattern */
+    /* existing helper classes for skill bars (still used by Languages) */
     .skill-bars .percent90 { width: 90%; }
     .skill-bars .percent100 { width: 100%; }
+
+    /* === Tech Stack marquee === */
+    .tech-stack-heading {
+      margin-bottom: 0.75rem;
+    }
+
+    .tech-stack-marquee {
+      position: relative;
+      overflow: hidden;
+      border-radius: 999px;
+      padding: 0.75rem 0;
+      background: rgba(7, 11, 25, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.18);
+    }
+
+    .tech-stack-track {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      animation: tech-marquee 28s linear infinite;
+      white-space: nowrap;
+    }
+
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1.05rem;
+      border-radius: 999px;
+      background: #0b1220;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .tech-pill span {
+      display: inline-block;
+    }
+
+    @keyframes tech-marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* make marquee slower on smaller screens so it feels smoother */
+    @media only screen and (max-width: 768px) {
+      .tech-stack-track {
+        animation-duration: 38s;
+      }
+    }
   </style>
 
   <!-- script -->
@@ -118,15 +177,52 @@
       </div>
 
       <div class="col-six tab-full">
-        <h3>Skills</h3>
-        <ul class="skill-bars">
-          <li><div class="progress percent95"><span>95%</span></div><strong>Python</strong></li>
-          <li><div class="progress percent85"><span>85%</span></div><strong>PyTorch, OpenCV &amp; Pandas</strong></li>
-          <li><div class="progress percent80"><span>80%</span></div><strong>Flask / Django</strong></li>
-          <li><div class="progress percent80"><span>80%</span></div><strong>SQL (MySQL)</strong></li>
-          <li><div class="progress percent75"><span>75%</span></div><strong>Java / Kotlin</strong></li>
-          <li><div class="progress percent70"><span>70%</span></div><strong>TensorFlow</strong></li>
-        </ul>
+        <!-- NEW Tech Stack marquee (replacing Skills %) -->
+        <h3 class="tech-stack-heading">Tech Stack</h3>
+        <div class="tech-stack-marquee">
+          <div class="tech-stack-track">
+            <!-- first sequence -->
+            <span class="tech-pill"><span>Python</span></span>
+            <span class="tech-pill"><span>PyTorch</span></span>
+            <span class="tech-pill"><span>TensorFlow</span></span>
+            <span class="tech-pill"><span>OpenCV</span></span>
+            <span class="tech-pill"><span>Persistent Homology (Ripser)</span></span>
+            <span class="tech-pill"><span>SAM / SAM2</span></span>
+            <span class="tech-pill"><span>Flask</span></span>
+            <span class="tech-pill"><span>Django</span></span>
+            <span class="tech-pill"><span>REST APIs</span></span>
+            <span class="tech-pill"><span>MySQL</span></span>
+            <span class="tech-pill"><span>SQLite</span></span>
+            <span class="tech-pill"><span>Java</span></span>
+            <span class="tech-pill"><span>Kotlin</span></span>
+            <span class="tech-pill"><span>Android Studio</span></span>
+            <span class="tech-pill"><span>Linux</span></span>
+            <span class="tech-pill"><span>Docker</span></span>
+            <span class="tech-pill"><span>Git &amp; GitHub</span></span>
+            <span class="tech-pill"><span>Firebase</span></span>
+            <span class="tech-pill"><span>LaTeX</span></span>
+            <!-- duplicate sequence for seamless loop -->
+            <span class="tech-pill"><span>Python</span></span>
+            <span class="tech-pill"><span>PyTorch</span></span>
+            <span class="tech-pill"><span>TensorFlow</span></span>
+            <span class="tech-pill"><span>OpenCV</span></span>
+            <span class="tech-pill"><span>Persistent Homology (Ripser)</span></span>
+            <span class="tech-pill"><span>SAM / SAM2</span></span>
+            <span class="tech-pill"><span>Flask</span></span>
+            <span class="tech-pill"><span>Django</span></span>
+            <span class="tech-pill"><span>REST APIs</span></span>
+            <span class="tech-pill"><span>MySQL</span></span>
+            <span class="tech-pill"><span>SQLite</span></span>
+            <span class="tech-pill"><span>Java</span></span>
+            <span class="tech-pill"><span>Kotlin</span></span>
+            <span class="tech-pill"><span>Android Studio</span></span>
+            <span class="tech-pill"><span>Linux</span></span>
+            <span class="tech-pill"><span>Docker</span></span>
+            <span class="tech-pill"><span>Git &amp; GitHub</span></span>
+            <span class="tech-pill"><span>Firebase</span></span>
+            <span class="tech-pill"><span>LaTeX</span></span>
+          </div>
+        </div>
 
         <!-- Languages (spoken) -->
         <h3 style="margin-top:1.75rem;">Languages</h3>
@@ -419,6 +515,7 @@
 
     <div class="row contact-form">
       <div class="col-twelve">
+        <!-- Simple email form; replace action with your Formspree endpoint if desired -->
         <form id="contactform" action="mailto:malakbachri145@gmail.com" method="POST" enctype="text/plain">
           <input type="text" name="name" placeholder="Your Name">
           <input type="email" name="_replyto" placeholder="Your Email">
